@@ -4,6 +4,8 @@ const takePictureButton = document.querySelector("#take-picture");
 const canvas = document.querySelector("#picture");
 const galleryElem = document.querySelector("#gallery");
 
+const galleryButton = document.querySelector("#gallery-button")
+
 const ctx = canvas.getContext('2d');
 let stream;
 const images = [];
@@ -54,6 +56,21 @@ function registerServiceWorker() {
         .then(() => { console.log('Registered service worker')})
         .catch (() => { console.log('Could not register service worker') });
     }
+}
+
+
+
+//Ta sig från kameran till galleri
+galleryButton.addEventListener('click', () => {
+    console.log("Button Working!");
+    gallery();
+});
+
+
+//Gör så att knappen tar oss vidare till en annan sida
+function gallery() {
+    window.location.replace("../gallery.html");
+
 }
 
 

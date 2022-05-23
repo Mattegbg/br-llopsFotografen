@@ -2,7 +2,7 @@ body {
     background-color: gray;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
 }
@@ -22,3 +22,19 @@ h1 {
     border-color: gray;
 
 }
+
+/* Gallery button */
+
+.gallery-button {
+    float: right;
+    width: 100px;
+
+}
+
+
+
+/*ta bort vertikal scrollbar*/
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
