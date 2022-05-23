@@ -1,0 +1,24 @@
+body {
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+
+}
+
+
+#start-button {
+ 
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    border-color: gray;
+
+}

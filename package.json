@@ -1,0 +1,24 @@
+{
+  "name": "brollopsfotografen",
+  "version": "1.0.0",
+  "description": "https://gist.github.com/zocom-christoffer-wallenberg/93712a2200c0c68cba0f9eea15f3a81f",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=3000 serve .",
+    "start-windows": "SET PORT=3000 && serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattegbg/brollopsFotografen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mattegbg/brollopsFotografen/issues"
+  },
+  "homepage": "https://github.com/Mattegbg/brollopsFotografen#readme",
+  "dependencies": {
+    "https-localhost": "^4.7.1"
+  }
+}
