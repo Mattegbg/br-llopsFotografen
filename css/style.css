@@ -2,7 +2,7 @@ body {
     background-color: gray;
     width: 100vw;
     height: 100vh;
-    
+
     justify-content: center;
     align-items: center;
 }
@@ -14,7 +14,7 @@ h1 {
 
 
 #start-button {
- 
+
     background-color: white;
     color: black;
     text-decoration: none;
@@ -37,4 +37,14 @@ h1 {
 html {
     overflow: scroll;
     overflow-x: hidden;
-    }
+}
+
+
+#videoDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
