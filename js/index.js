@@ -3,6 +3,10 @@ const takePictureButton = document.querySelector("#take-picture");
 const canvas = document.querySelector("#picture");
 const galleryElem = document.querySelector("#gallery");
 
+const videoDiv = document.querySelector('#videoDiv');
+const PictureDiv = document.querySelector('#picture-div');
+const newPic = document.querySelector('#newPic');
+
 const galleryButton = document.querySelector("#gallery-button")
 
 const ctx = canvas.getContext('2d');
@@ -26,11 +30,16 @@ async function cameraStart(){
 
     cameraStart();
 
-
+newPic.addEventListener('click', () => {
+    PictureDiv.style.display='none' // göm pictureDiv när vi tar bilden
+    videoDiv.style.display='flex' // visa videoDiv när vi tar bilden
+})
 
 takePictureButton.addEventListener('click', () => {
     ctx.drawImage(videoElem, 0, 0, canvas.width, canvas.height);
     const imageData = canvas.toDataURL('image/png'); //Gör bilden till PNG
+    videoDiv.style.display='none' // göm videoDiv när vi tar bilden
+    PictureDiv.style.display='flex' // visa pictureDiv när vi tar bilden
 
     images.push({
         id: images.length,

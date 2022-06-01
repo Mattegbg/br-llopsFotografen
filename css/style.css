@@ -1,3 +1,10 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
 body {
     background-color: #2A2E30;
     width: 100vw;
@@ -25,13 +32,47 @@ h1 {
 
 /* Gallery button */
 
-.gallery-button {
+#gallery-button {
     float: right;
-    width: 100px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 50px;
 
 }
 
+#gallery-button img {
+    width: 100%;
+}
 
+#gallery-button:hover {
+    background-color: lightslategray;
+}
+
+/* camera button in gallery */
+
+#camera-button {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 50px;
+
+    
+}
+
+#camera-button img {
+width: 100%;
+}
+
+#camera-button:hover {
+    background-color: lightslategray;
+}
 
 /*ta bort vertikal scrollbar*/
 html {
@@ -40,7 +81,7 @@ html {
 }
 
 /* Kamera placering */
-#videoDiv {
+#videoDiv, #picture-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +120,7 @@ html {
     color: white;
     font-size: 30px;
 
+    font-family: "Times New Roman", Times, serif;
     align-items: center;
     text-align: center;
     letter-spacing: 0.5em;
@@ -87,11 +129,10 @@ html {
 }
 
 /*Ta bild knappen i camera.html */
-#take-picture {
+#take-picture, #newPic {
     width: 280px;
     height: 25px;
 
-    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 700;
 
@@ -107,3 +148,45 @@ html {
 
 
 }
+
+#picture {
+    width: 640px;
+    height: 480px;
+}
+
+#picture-div {
+    display: none;
+}
+
+/* deleteButton i galleri */ 
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    gap: 2em;
+
+}
+
+#gallery div {
+    position: relative;
+    
+}
+
+#gallery div button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: lightslategray !important;
+}
+
