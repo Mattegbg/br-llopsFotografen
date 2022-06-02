@@ -7,11 +7,7 @@
 
 body {
     background-color: #2A2E30;
-    width: 100vw;
-    height: 100vh;
-
-    justify-content: center;
-    align-items: center;
+    
 }
 
 h1 {
@@ -80,6 +76,13 @@ html {
     overflow-x: hidden;
 }
 
+@media (max-width: 640px) {
+    video, canvas{
+      width: 90vw !important;
+      height: auto !important;
+    }
+  }
+
 
 
 /* Kamera placering */
@@ -89,7 +92,6 @@ html {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    min-width: 100vw;
 }
 
 /* Första sidan text */

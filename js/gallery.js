@@ -1,7 +1,7 @@
 const galleryElem = document.querySelector("#gallery");
 const cameraButton = document.querySelector("#camera-button");
 
-const images = JSON.parse(localStorage.getItem('weddingApp')); // läggs utanför alla funktioner för att allt skall kunna nå denna
+let images = JSON.parse(localStorage.getItem('weddingApp')); // läggs utanför alla funktioner för att allt skall kunna nå denna
 
 //Hämtar från localstorage
 function createImage(image) {
@@ -15,11 +15,12 @@ function createImage(image) {
     deleteButton.classList.add('deleteButton');
     deleteButton.addEventListener('click', () => {
         console.log('picture deleted')
+        images = JSON.parse(localStorage.getItem('weddingApp')); // hämta bilderna från localstorage på nytt (typ uppdaterar nya/raderade bilder)
         
         div.remove(); // tar bort knappen efter att bilden raderas
         console.log(image);
         console.log(images);
-        let newArr = images.filter(imageInFilter =>   //inageInFilter = går igenom alla bilders ID när dom raderas. Alla bilder vi vill behålla ligger i newArr
+        let newArr = images.filter(imageInFilter =>   //imageInFilter = går igenom alla bilders ID när dom raderas. Alla bilder vi vill behålla ligger i newArr
 
             image.image != imageInFilter.image  //Jag vill inte behålla den bilden jag just tog bort
 
@@ -34,6 +35,7 @@ function createImage(image) {
 
 }
 
+//hämtar bilder från localstorage
 function getImages() {
 
     for (const image of images) {
