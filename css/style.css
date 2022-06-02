@@ -80,6 +80,8 @@ html {
     overflow-x: hidden;
 }
 
+
+
 /* Kamera placering */
 #videoDiv, #picture-div {
     display: flex;
